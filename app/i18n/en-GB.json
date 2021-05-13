@@ -1,0 +1,12 @@
+{
+  "app": {
+    "name": "RPS Project Tracker"
+  },
+  "auth": {
+    "Sign_In": "Login",
+    "Sign_Up": "Sign Up"
+  },
+  "financial": {
+    "symbol": "€"
+  }
+}

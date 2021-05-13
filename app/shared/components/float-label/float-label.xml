@@ -1,0 +1,4 @@
+<GridLayout rows="30, auto" marginBottom="5" loaded="onLoaded">
+    <Label row="1" opacity="0.4" fontSize="10" class="input" textTransform="uppercase"></Label>
+    <TextField row="1" focus="onFocus" blur="onBlur" borderBottomWidth="2" borderBottomColor="#cec8c8" padding="0" text="{{ text }}"></TextField>
+</GridLayout>

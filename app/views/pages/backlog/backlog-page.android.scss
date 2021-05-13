@@ -1,0 +1,28 @@
+@import 'backlog-page-common';
+
+// Place any CSS rules you want to apply only on Android here
+
+
+/* Common Styles */
+.backlog-container {
+  background-color: #ffffff;
+}
+
+.slide-out-img {
+  margin: 20 0 30 12;
+}
+
+.list-container {
+  height: 100%;
+}
+
+/* Android styles */
+ActionBar {
+  color: #ffffff;
+}
+
+.backlog-container {
+  background-color: #ffffff;
+  /*height: 100%;
+   margin-top: 20;*/
+}

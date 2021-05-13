@@ -1,0 +1,68 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" xmlns:nsDrawer="nativescript-ui-sidedrawer" loaded="onLoaded" actionBarHidden="true">
+
+    <GridLayout>
+        <nsDrawer:RadSideDrawer id="sideDrawer" drawerLocation="Right">
+
+            <nsDrawer:RadSideDrawer.drawerTransition>
+                <nsDrawer:SlideInOnTopTransition />
+            </nsDrawer:RadSideDrawer.drawerTransition>
+
+            <nsDrawer:RadSideDrawer.drawerContent>
+                <GridLayout rows="auto, *, 40" class="sidedrawer sidedrawer-left">
+                    <StackLayout class="sidedrawer-header">
+                        <Image src="{{ currentUser.avatar }}" class="sidedrawer-header-image fa" text="&#xf2bd;" />
+                        <Label class="sidedrawer-header-brand" text="{{ currentUser.fullName }}" />
+                        <Label class="footnote" text="alex@nuvious.com" />
+                    </StackLayout>
+
+                    <ScrollView row="1" class="sidedrawer-content">
+                        <StackLayout>
+
+                            <GridLayout columns="auto, *" class="{{ 'sidedrawer-list-item' + (selectedPage === 'Dashboard' ? ' selected': '') }}" title="Dashboard" tap="onNavigationItemTap">
+                                <Label row="0" col="0" text="&#xf201;" class="fas" />
+                                <Label row="0" col="1" text="Dashboard" class="p-r-10" />
+                            </GridLayout>
+
+                            <GridLayout columns="auto, *" class="{{ 'sidedrawer-list-item' + (selectedPage === 'my' ? ' selected': '') }}" title="my" tap="onNavigationItemTap">
+                                <Label row="0" col="0" text="&#xf0ae;" class="fas" />
+                                <Label row="0" col="1" text="My Items" class="p-r-10" />
+                            </GridLayout>
+
+                            <GridLayout columns="auto, *" class="{{ 'sidedrawer-list-item' + (selectedPage === 'open' ? ' selected': '') }}" title="open" tap="onNavigationItemTap">
+                                <Label row="0" col="0" text="&#xf07c;" class="far" />
+                                <Label row="0" col="1" text="Open Items" class="p-r-10" />
+                            </GridLayout>
+
+                            <GridLayout columns="auto, *" class="{{ 'sidedrawer-list-item' + (selectedPage === 'closed' ? ' selected': '') }}" title="closed" tap="onNavigationItemTap">
+                                <Label row="0" col="0" text="&#xf07b;" class="far" />
+                                <Label row="0" col="1" text="Closed Items" class="p-r-10" />
+                            </GridLayout>
+
+                            <StackLayout class="hr-light"></StackLayout>
+
+                            <GridLayout columns="auto, *" class="{{ 'sidedrawer-list-item' + (selectedPage === 'Settings' ? ' selected': '') }}" title="Settings" tap="onNavigationItemTap">
+                                <Label row="0" col="0" text="&#xf1de;" class="fas" />
+                                <Label row="0" col="1" text="Settings" class="p-r-10" />
+                            </GridLayout>
+                        </StackLayout>
+                    </ScrollView>
+
+                    <GridLayout row="2" columns="auto, *" class="sidedrawer-list-item inverse" tap="onLogoutTap">
+                        <Label row="0" col="0" text="&#xf2f5;" class="fas" />
+                        <Label row="0" col="1" text="Logout" class="p-r-10" />
+                    </GridLayout>
+
+                </GridLayout>
+
+            </nsDrawer:RadSideDrawer.drawerContent>
+
+            <nsDrawer:RadSideDrawer.mainContent>
+                <Frame id="contentFrame" defaultPage="views/pages/dashboard/dashboard-page"></Frame>
+            </nsDrawer:RadSideDrawer.mainContent>
+        </nsDrawer:RadSideDrawer>
+
+        <GridLayout id="popoverContainer" visibility="hidden" class="popover-container">
+        </GridLayout>
+
+    </GridLayout>
+</Page>

@@ -1,0 +1,42 @@
+{
+  "nativescript": {
+    "id": "org.nativescript.rpstrackertns",
+    "tns-android": {
+      "version": "6.0.0"
+    },
+    "tns-ios": {
+      "version": "6.0.1"
+    }
+  },
+  "scripts": {
+    "lint": "tslint 'app/**/*.ts' -t verbose"
+  },
+  "prettier": {
+    "singleQuote": true
+  },
+  "main": "app.js",
+  "description": "NativeScript Application",
+  "license": "SEE LICENSE IN <your-license-filename>",
+  "repository": "<fill-your-repository-here>",
+  "dependencies": {
+    "animate.css": "^3.7.2",
+    "email-validator": "2.0.4",
+    "moment": "2.24.0",
+    "nativescript-localize": "^4.2.0",
+    "nativescript-sentry": "^1.9.1",
+    "nativescript-theme-core": "~1.0.6",
+    "nativescript-ui-chart": "^6.0.0",
+    "nativescript-ui-dataform": "5.1.1",
+    "nativescript-ui-sidedrawer": "7.0.0",
+    "tns-core-modules": "~6.0.0"
+  },
+  "devDependencies": {
+    "nativescript-dev-webpack": "~1.0.0",
+    "node-sass": "^4.7.1",
+    "tns-platform-declarations": "^6.1.1",
+    "tslint": "5.18.0",
+    "typescript": "~3.4.0"
+  },
+  "gitHead": "f28dbc60d74dd2cef4b645afd8fdd63bbb12c73e",
+  "readme": "NativeScript Application"
+}

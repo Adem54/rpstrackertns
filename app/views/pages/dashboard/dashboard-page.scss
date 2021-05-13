@@ -1,0 +1,15 @@
+// Custom common variables
+@import '../../../app-variables';
+
+.counter-count {
+  font-weight: 200;
+  font-size: 44;
+  text-align: center;
+}
+
+.counter-status {
+  font-size: 12;
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: -5;
+}

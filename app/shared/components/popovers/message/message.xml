@@ -1,0 +1,7 @@
+<GridLayout loaded="onLoaded" class="popover-wrapper">
+    <StackLayout class="contents" tap="unhandledTap" height="300" verticalAlignment="middle" ios:borderRadius="12" android:borderRadius="3">
+        <Label text="{{ $value }}" horizontalAlignment="center" />
+        <Button class="btn btn-primary" text="OK" tap="onTapOK" />
+        <Button class="btn btn-primary" text="CLOSE" tap="onTapClose" />
+    </StackLayout>
+</GridLayout>

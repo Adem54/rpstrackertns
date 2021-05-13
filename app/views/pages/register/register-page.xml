@@ -1,0 +1,45 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" xmlns:fl="shared/components/float-label" class="page" navigatingTo="onNavigatingTo" actionBarHidden="true" androidStatusBarBackground="#023141">
+
+    <GridLayout rows="1*, 2*" class="auth-container">
+
+        <GridLayout row="0" class="auth-logo-container">
+            <Image src="res://rpslogo" stretch="aspectFit" class="auth-logo"></Image>
+        </GridLayout>
+
+        <GridLayout row="1" rows="*, auto, 20" class="auth-form-wrapper p-l-30 p-r-30">
+
+            <StackLayout row="0">
+                <StackLayout>
+                    <fl:float-label text="{{ fullName }}" textChanged="{{ onFullNameChanged }}" placeholder="Full Name" secure="true" />
+                    <Label visibility="visible" text="full name is required" class="validation message" />
+                </StackLayout>
+
+                <StackLayout class="input-field with-validation">
+                    <fl:float-label text="{{ email }}" textChanged="{{ onEmailChanged }}" placeholder="Email" />
+                    <Label visibility="visible" text="email is missing" class="validation message" />
+                    <Label visibility="visible" text="the email is not in the correct format" class="validation message" />
+                </StackLayout>
+
+                <StackLayout>
+                    <fl:float-label text="{{ password }}" textChanged="{{ onPasswordChanged }}" placeholder="Password" secure="true" />
+                    <Label visibility="visible" text="password is required" class="validation message" />
+                </StackLayout>
+
+                <Button text="Sign up" tap="onRegisterTap" class="btn btn-primary btn-login" />
+            </StackLayout>
+
+
+            <FlexboxLayout row="1" class="auth-other-page-link-wrapper">
+                <Label text="Already have an account?" class="auth-other-page-link" />
+                <Label tap="onGotoLoginTap" textTransform="uppercase" fontWeight="bold" text="  Sign in" class="auth-other-page-link" />
+            </FlexboxLayout>
+
+
+        </GridLayout>
+
+
+        <ActivityIndicator row="1" busy="{{ loggingIn }}" color="#ffffff" />
+
+    </GridLayout>
+
+</Page>

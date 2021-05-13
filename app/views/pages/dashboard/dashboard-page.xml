@@ -1,0 +1,100 @@
+<Page navigatingTo="onNavigatingTo" loaded="onLoaded" title="Dashboard"
+    xmlns:chart="nativescript-ui-chart"
+ xmlns="http://schemas.nativescript.org/tns.xsd">
+
+    <ActionBar title="Dashboard">
+        <ActionItem tap="toggleDrawer" ios.position="right">
+            <StackLayout class="navbar_image_wrapper" ios:horizontalAlignment="right">
+                <Image src="res://iconelipseswhite" />
+            </StackLayout>
+        </ActionItem>
+    </ActionBar>
+
+    <GridLayout rows="36, 26, 70, 200, 40, *" padding="10 0 0 0">
+
+        <SegmentedBar row="0" selectedIndex="{{ sbSelectedIndex }}" android:margin="-20 10 0 10" ios:margin="-10 10 0 10" ios:height="25">
+            <SegmentedBarItem title="3 Months" />
+            <SegmentedBarItem title="6 Months" />
+            <SegmentedBarItem title="1 Year" />
+        </SegmentedBar>
+
+        <Label row="1" text="All Issues" class="section-header" margin="0 10 0 10" />
+
+        <GridLayout row="2" rows="50, 14" columns="*,*,*" android:margin="-10 0 0 0">
+            <Label row="0" col="0" text="{{ numIssuesActive }}" class="counter-count" />
+            <Label row="1" col="0" text="active" class="counter-status" />
+            <Label row="0" col="1" text="{{ numIssuesClosed }}" class="counter-count closed-issues-text" />
+            <Label row="1" col="1" text="closed" class="counter-status closed-issues-text" />
+            <Label row="0" col="2" text="{{ numIssuesOpen }}" class="counter-count open-issues-text" />
+            <Label row="1" col="2" text="open" class="counter-status open-issues-text" />
+        </GridLayout>
+
+        <chart:RadCartesianChart row="3" id="cartesianChart" android:margin="-20 0 0 0" pointSelected="onPointSelected">
+
+            <chart:RadCartesianChart.horizontalAxis>
+                <chart:CategoricalAxis labelSize="8" labelFitMode="Rotate" labelTextColor="#cb4b16" lineColor="red" lineThickness="1" />
+            </chart:RadCartesianChart.horizontalAxis>
+
+            <chart:RadCartesianChart.verticalAxis>
+                <chart:LinearAxis labelFormat="%.0f" allowZoom="true" allowPan="true" />
+            </chart:RadCartesianChart.verticalAxis>
+
+            <chart:RadCartesianChart.series>
+                <chart:BarSeries seriesName="Open" legendTitle="Open" items="{{ dataOpen }}" categoryProperty="Month" valueProperty="Count" stackMode="Stack" selectionMode="DataPoint" />
+                <chart:BarSeries seriesName="Closed" legendTitle="Closed" items="{{ dataClosed }}" categoryProperty="Month" valueProperty="Count" stackMode="Stack" selectionMode="DataPoint" />
+            </chart:RadCartesianChart.series>
+
+            <chart:RadCartesianChart.palettes>
+
+                <chart:Palette seriesName="Open">
+                    <chart:Palette.entries>
+                        <chart:PaletteEntry strokeWidth="0" strokeColor="#dc3545"
+                        fillColor="#70dc3545" />
+                    </chart:Palette.entries>
+                </chart:Palette>
+
+                <chart:Palette seriesName="Closed">
+                    <chart:Palette.entries>
+                        <chart:PaletteEntry strokeWidth="0" strokeColor="#28a745"
+                        fillColor="#7028a745" />
+                    </chart:Palette.entries>
+                </chart:Palette>
+
+            </chart:RadCartesianChart.palettes>
+
+            <chart:RadCartesianChart.trackball>
+                <chart:Trackball />
+            </chart:RadCartesianChart.trackball>
+
+        </chart:RadCartesianChart>
+
+        <Label row="4" textWrap="true" margin="0 10 0 10" visibility="{{ isDataPointSelected ? 'visible' : 'collapsed' }}">
+            <FormattedString>
+                <Span text="{{ selectedMonth }}" class="section-header" />
+                <Span text="&#xa;" />
+                <Span text="{{ selectedStatus + ' Issues' }}" class="{{ selectedStatus === 'Open' ? 'section-sub-header open-issues-text' : 'section-sub-header closed-issues-text' }}" />
+            </FormattedString>
+        </Label>
+
+        <GridLayout row="5" margin="10 0 0 0" visibility="{{ isDataPointSelected ? 'visible' : 'collapsed' }}">
+            <ListView class="items-list" items="{{ items }}" itemTap="onListItemTap" separatorColor="#97a879" height="100%" width="100%">
+                <ListView.itemTemplate>
+                    <GridLayout class="li-wrapper" rows="53" columns="60,  *, 40">
+
+                        <Image col="0" class="user-avatar" src="{{ assignee.avatar }}" stretch="aspectFit" />
+
+                        <StackLayout class="li-info-wrapper" col="1">
+                            <Label class="li-title" textWrap="true" text="{{ title }}" />
+                            <Label class="li-estimate" text="{{ 'Estimate: ' + estimate }}" />
+                        </StackLayout>
+
+                        <Image col="2" class="li-icon" src="{{ imageResFromType(type) }}" stretch="aspectFit" />
+
+
+                    </GridLayout>
+                </ListView.itemTemplate>
+            </ListView>
+        </GridLayout>
+    </GridLayout>
+
+</Page>

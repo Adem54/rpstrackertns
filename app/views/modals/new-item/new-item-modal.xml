@@ -1,0 +1,57 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" 
+    xmlns:df="nativescript-ui-dataform" loaded="onLoaded">
+
+    <Page.actionBar>
+        <ActionBar title="New Item" icon="">
+
+            <ActionItem tap="onOkButtonTap" ios.systemIcon="3" ios.position="right" android.systemIcon="ic_menu_save" android.position="actionBar"></ActionItem>
+            <ActionItem tap="onCancelButtonTap" ios.systemIcon="14" ios.position="left" android.systemIcon="ic_menu_close_clear_cancel" android.position="actionBar"></ActionItem>
+        </ActionBar>
+    </Page.actionBar>
+
+
+    <GridLayout rows="60, *">
+
+        <GridLayout row="0" columns="*, *, auto" class="assignee-row" tap="onAssigneeRowTap">
+            <Label text="Assignee" color="#4b5833" col="0" />
+            <Label text="{{ selectedAssignee.fullName }}" col="1" />
+            <Image id="assigneeImg" width="40" height="40" class="pt-item-detail-avatar user-avatar" src="{{ selectedAssignee.avatar }}" col="2" />
+        </GridLayout>
+
+        <df:RadDataForm row="1" id="itemDetailsDataForm" source="{{ newItemForm }}" commitMode="Manual">
+            <df:RadDataForm.properties>
+                <df:EntityProperty name="title" displayName="Title" index="0" hintText="Title" required="true">
+                    <df:EntityProperty.editor>
+                        <df:PropertyEditor type="MultilineText">
+                            <df:PropertyEditor.propertyEditorStyle>
+                                <df:PropertyEditorStyle labelTextColor="#4b5833" labelPosition="Top"/>
+                            </df:PropertyEditor.propertyEditorStyle>
+                        </df:PropertyEditor>
+                    </df:EntityProperty.editor>
+                    <df:EntityProperty.validators>
+                        <df:NonEmptyValidator errorMessage="Title can't be empty." />
+                    </df:EntityProperty.validators>
+                </df:EntityProperty>
+
+                <df:EntityProperty name="description" displayName="Description" index="1" hintText="description" required="true">
+                    <df:EntityProperty.editor>
+                        <df:PropertyEditor type="MultilineText">
+                            <df:PropertyEditor.propertyEditorStyle>
+                                <df:PropertyEditorStyle labelTextColor="#4b5833" labelPosition="Top"/>
+                            </df:PropertyEditor.propertyEditorStyle>
+                        </df:PropertyEditor>
+                    </df:EntityProperty.editor>
+                </df:EntityProperty>
+
+                <df:EntityProperty name="typeStr" displayName="Type" index="2" valuesProvider="{{ itemTypesProvider }}" required="true">
+                    <df:EntityProperty.editor>
+                        <df:PropertyEditor type="Picker" />
+                    </df:EntityProperty.editor>
+                </df:EntityProperty>
+
+            </df:RadDataForm.properties>
+        </df:RadDataForm>
+
+    </GridLayout>
+
+</Page>

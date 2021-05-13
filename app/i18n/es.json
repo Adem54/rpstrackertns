@@ -1,0 +1,9 @@
+{
+  "app": {
+    "name": "RPS Project Tracker"
+  },
+  "auth": {
+    "Sign_In": "Iniciar",
+    "Sign_Up": "Sign Up"
+  }
+}

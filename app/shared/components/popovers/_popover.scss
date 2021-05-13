@@ -1,0 +1,17 @@
+.popover-wrapper {
+  .contents {
+    background-color: white;
+    width: 80%;
+    padding: 20;
+    animation-name: fadeInUp;
+    animation-duration: 500ms;
+  }
+
+  .overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    animation-name: fadeIn;
+    animation-duration: 500ms;
+  }
+}

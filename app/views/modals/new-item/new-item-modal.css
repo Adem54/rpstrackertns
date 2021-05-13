@@ -1,0 +1,22 @@
+.new-item-actions-container {
+  align-items: center;
+  background-color: #efefef;
+  justify-content: space-between;
+}
+
+.modal-close-img {
+  margin-left: 10;
+}
+
+.btn-save {
+  color: #333333;
+  android-elevation: 0;
+}
+
+.assignee-row {
+  margin-left: 10;
+  margin-right: 10;
+  border-bottom-width: 1;
+  border-bottom-color: #d9d9d9;
+  height: 50;
+}

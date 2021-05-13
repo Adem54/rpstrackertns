@@ -1,0 +1,38 @@
+<Page navigatingTo="onNavigatingTo" loaded="onLoaded" xmlns="http://schemas.nativescript.org/tns.xsd">
+
+    <ActionBar title="Backlog">
+        <ActionItem tap="toggleDrawer" ios.position="right">
+            <StackLayout class="navbar_image_wrapper" ios:horizontalAlignment="right">
+                <Image src="res://iconelipseswhite" />
+            </StackLayout>
+        </ActionItem>
+    </ActionBar>
+
+
+    <AbsoluteLayout>
+
+        <ListView class="items-list" items="{{ items }}" loaded="onListViewLoaded" itemTap="onListItemTap" separatorColor="#97a879" height="100%" width="100%">
+            <ListView.itemTemplate>
+                <GridLayout class="li-wrapper" rows="53" columns="60,  *, 40">
+
+                    <Image col="0" class="user-avatar" src="{{ assignee.avatar }}" stretch="aspectFit" />
+
+                    <StackLayout class="li-info-wrapper" col="1">
+                        <Label class="li-title" textWrap="true" text="{{ title }}" />
+                        <Label class="li-estimate" text="{{ 'Estimate: ' + estimate }}" />
+                    </StackLayout>
+
+                    <Image col="2" class="li-icon" src="{{ imageResFromType(type) }}" stretch="aspectFit" />
+
+
+                </GridLayout>
+            </ListView.itemTemplate>
+        </ListView>
+
+        <GridLayout id="btnFab" tap="onAddTap">
+            <Label class="lbl-plus" />
+        </GridLayout>
+
+    </AbsoluteLayout>
+
+</Page>
