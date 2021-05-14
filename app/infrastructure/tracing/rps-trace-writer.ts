@@ -1,4 +1,4 @@
-import * as traceModule from '@nativescript/core/trace';
+import { Trace } from '@nativescript/core/trace';
 import { PtErrorService } from '~/core/contracts/services';
 
 export class RPSTraceWriter {
@@ -9,12 +9,12 @@ export class RPSTraceWriter {
     public write(message: any, category: string, type?: number): void {
         if (type) {
             switch (type) {
-                case traceModule.messageType.log:
+                case Trace.messageType.log:
                     console.log(
                         'RPS TRACEWRITER: ' + category + ': ' + message
                     );
                     break;
-                case traceModule.messageType.error:
+                case Trace.messageType.error:
                     console.error(
                         'RPS TRACEWRITER: ' + category + ': ' + message
                     );

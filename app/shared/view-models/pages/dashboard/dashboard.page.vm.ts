@@ -1,6 +1,5 @@
-import { Observable } from '@nativescript/core';
+import { Observable, ObservableArray } from '@nativescript/core';
 import { ObservableProperty } from '~/shared/observable-property-decorator';
-import { ObservableArray } from 'tns-core-modules/data/observable-array/observable-array';
 import {
     PtBacklogService,
     PtAuthService,

@@ -1,4 +1,4 @@
-import * as frame from '@nativescript/core/ui/frame';
+import { Frame } from '@nativescript/core/ui/frame';
 
 declare const android: any;
 
@@ -23,7 +23,7 @@ export function setStatusBarColors(): void {
 
 export function hideStatusBar() {
     // execure android hiding code
-    frame
+    Frame
         .topmost()
         .android.activity.getWindow()
         .getDecorView()
@@ -32,7 +32,7 @@ export function hideStatusBar() {
 
 export function showStatusBar() {
     // execure android showing code
-    frame
+    Frame
         .topmost()
         .android.activity.getWindow()
         .getDecorView()

@@ -32,7 +32,7 @@ export class LoginViewModel extends Observable {
 
         this.loggingIn = true;
 
-        return new Promise((resolve, reject) => {
+        return new Promise<void>((resolve, reject) => {
             this.authService
                 .login(loginModel)
                 .then(() => {

@@ -1,4 +1,4 @@
-import { Frame, EventData, Page, View, load } from '@nativescript/core';
+import { Frame, EventData, Page, View, Builder, LayoutBase } from '@nativescript/core';
 import { RadSideDrawer } from 'nativescript-ui-sidedrawer';
 
 import {
@@ -13,7 +13,6 @@ import {
 } from '~/shared/helpers/navigation/nav.helper';
 import { RootPageViewModel } from '~/shared/view-models/pages/root/root.page.vm';
 import { PresetType } from '~/core/models/types';
-import { LayoutBase } from 'tns-core-modules/ui/layouts/layout-base';
 import {
     POPOVER_SHOW_EVENT_NAME,
     POPOVER_HIDE_EVENT_NAME,
@@ -42,7 +41,7 @@ export function onLoaded(args: EventData) {
     page.on(POPOVER_SHOW_EVENT_NAME, (popArgs: PopoverEventData) => {
         const popoverPayload = popArgs.payload;
 
-        const childView = load({
+        const childView = Builder.load({
             path: popoverPayload.component.path,
             name: popoverPayload.component.name
         });

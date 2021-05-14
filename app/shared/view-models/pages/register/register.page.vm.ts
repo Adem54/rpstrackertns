@@ -36,7 +36,7 @@ export class RegisterViewModel extends Observable {
             fullName: this.fullName
         };
 
-        return new Promise((resolve, reject) => {
+        return new Promise<void>((resolve, reject) => {
             this.authService
                 .register(registerModel)
                 .then(() => {

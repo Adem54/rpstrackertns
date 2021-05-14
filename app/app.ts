@@ -1,8 +1,7 @@
-import * as application from '@nativescript/core/application';
-import * as traceModule from '@nativescript/core/trace';
+import { Application, Trace, TraceErrorHandler } from '@nativescript/core';
 import { appConfig } from '~/config/app-config';
 import { setAppEvents } from './globals/app-events/app-events';
-import { localize } from 'nativescript-localize';
+import { localize } from '@nativescript/localize';
 
 import '~/globals/dependencies/locator';
 import { RPSTraceCategory } from './infrastructure/tracing/rps-trace-categories';
@@ -25,7 +24,7 @@ traceModule.addWriter(new RPSTraceWriter(errorService));
 traceModule.enable();
 */
 
-const errorHandler: traceModule.ErrorHandler = {
+const errorHandler: TraceErrorHandler = {
     handlerError(err: Error) {
         if (global.TNS_ENV === 'dev') {
             console.log('RPS ERROR: ' + err);
@@ -39,12 +38,12 @@ const errorHandler: traceModule.ErrorHandler = {
         }
     }
 };
-traceModule.setErrorHandler(errorHandler);
+Trace.setErrorHandler(errorHandler);
 
 setAppEvents();
 
-application.setResources({ L: localize });
-application.run({ moduleName: 'app-root' });
+Application.setResources({ L: localize });
+Application.run({ moduleName: 'app-root' });
 
 /*
 Do not place any code after the application has been started as it will not

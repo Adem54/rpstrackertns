@@ -1,11 +1,11 @@
-import { NavigationEntry, Frame, topmost, Page, StackLayout, Label } from '@nativescript/core';
+import { NavigationEntry, Frame, Page, StackLayout, Label } from '@nativescript/core';
 import { ROUTES } from '~/shared/helpers/navigation/routes';
 
 export function navigate(
     pageModuleNameOrNavEntry: string | NavigationEntry,
     otherFrame?: Frame
 ) {
-    const navFrame = otherFrame ? otherFrame : topmost();
+    const navFrame = otherFrame ? otherFrame : Frame.topmost();
     if (typeof pageModuleNameOrNavEntry === 'object') {
         navFrame.navigate(pageModuleNameOrNavEntry);
     } else if (typeof pageModuleNameOrNavEntry === 'string') {
@@ -82,6 +82,6 @@ export function goToSettingsPage() {
 }
 
 export function goBack(navFrame?: Frame) {
-    const frame = navFrame ? navFrame : topmost();
+    const frame = navFrame ? navFrame : Frame.topmost();
     frame.goBack();
 }

@@ -1,5 +1,6 @@
 import * as app from '@nativescript/core/application';
 
+@NativeClass()
 class MyDelegate extends UIResponder implements UIApplicationDelegate {
     public static ObjCProtocols = [UIApplicationDelegate];
 

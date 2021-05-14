@@ -1,9 +1,9 @@
-import { PropertyChangeData, Color, Label, TextField, KeyboardType, AnimationPromise, fromObject } from '@nativescript/core';
-import { LayoutBase } from 'tns-core-modules/ui/layouts/layout-base';
+import { PropertyChangeData, Color, Label, TextField, CoreTypes, fromObject, LayoutBase } from '@nativescript/core';
+import { AnimationPromise } from '@nativescript/core/ui/animation';
 
 interface FloatLabelVm {
     placeholder: string;
-    keyboardType: KeyboardType;
+    keyboardType: CoreTypes.KeyboardInputType;
     secure: boolean;
     text: string;
     textChanged: Function;
@@ -11,7 +11,7 @@ interface FloatLabelVm {
 
 interface ObsWithPlaceholder extends LayoutBase {
     placeholder: string;
-    keyboardType: KeyboardType;
+    keyboardType: CoreTypes.KeyboardInputType;
     secure: boolean;
     text: string;
     textChanged: Function;

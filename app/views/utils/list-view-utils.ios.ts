@@ -1,6 +1,6 @@
 import { ListView } from '@nativescript/core';
 import { ListViewScrollListener } from './list-view-scroll-listener';
-import { ListViewScrollListenerDelegateImpl } from './list-view-ios-delegate';
+import { ListViewScrollListenerDelegateImpl } from './list-view.delegate';
 
 export function addScrollListener(
     listView: ListView,

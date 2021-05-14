@@ -1,5 +1,4 @@
-import { EventData, GridLayout } from '@nativescript/core';
-import { LayoutBase } from 'tns-core-modules/ui/layouts/layout-base';
+import { EventData, GridLayout, LayoutBase } from '@nativescript/core';
 import { closePopover } from '~/shared/helpers/popover/popover.helper';
 
 export function onPopoverLoaded(args: EventData) {

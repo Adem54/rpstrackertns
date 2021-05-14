@@ -1,5 +1,5 @@
 import * as app from '@nativescript/core/application';
-import * as traceModule from '@nativescript/core/trace';
+import { Trace } from '@nativescript/core';
 import { setNativeEvents } from '~/globals/app-events/app-events-native';
 import { getErrorService } from '../dependencies/locator';
 
@@ -41,7 +41,7 @@ export const setAppEvents = () => {
     app.on(app.uncaughtErrorEvent, function (_args: app.UnhandledErrorEventData) {
         console.log('uncaughtErrorEvent');
         console.log(_args.error);
-        traceModule.error(_args.error);
+        Trace.error(_args.error);
     });
 
     app.on(app.discardedErrorEvent, function (_args: app.DiscardedErrorEventData) {

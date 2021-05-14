@@ -1,7 +1,8 @@
 import { ListView } from '@nativescript/core';
 import { ListViewScrollListener } from './list-view-scroll-listener';
 
-export class ListViewScrollListenerDelegateImpl extends NSObject
+@NativeClass()
+class ListViewScrollListenerDelegateImpl extends NSObject
     implements UITableViewDelegate {
     public static ObjCProtocols = [UITableViewDelegate];
 
@@ -47,3 +48,5 @@ export class ListViewScrollListenerDelegateImpl extends NSObject
         this._sl.scrollHalted();
     }
 }
+
+export { ListViewScrollListenerDelegateImpl };

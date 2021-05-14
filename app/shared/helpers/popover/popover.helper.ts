@@ -1,4 +1,4 @@
-import { EventData, topmost } from '@nativescript/core';
+import { EventData, Frame } from '@nativescript/core';
 
 export const POPOVER_SHOW_EVENT_NAME = 'showPopover';
 export const POPOVER_HIDE_EVENT_NAME = 'hidePopover';
@@ -29,7 +29,7 @@ export function showPopoverMessage(message: string) {
             }
         }
     };
-    topmost().page.notify(evtData);
+    Frame.topmost().page.notify(evtData);
 }
 
 export function closePopover() {
@@ -37,5 +37,5 @@ export function closePopover() {
         eventName: POPOVER_HIDE_EVENT_NAME,
         object: null
     };
-    topmost().page.notify(evtData);
+    Frame.topmost().page.notify(evtData);
 }

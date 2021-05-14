@@ -1,6 +1,5 @@
 import * as appModule from '@nativescript/core/application';
 import * as platformModule from '@nativescript/core/platform';
-import * as utilsModule from 'tns-core-modules/utils/utils';
 
 import { PtDeviceInfoService } from '~/core/contracts/services';
 
@@ -33,9 +32,9 @@ export class DeviceInfoService implements PtDeviceInfoService {
                 deviceUUID: platformModule.device.uuid
             },
             screen: {
-                screenHeight: platformModule.screen.mainScreen.heightDIPs,
-                screenWidth: platformModule.screen.mainScreen.widthDIPs,
-                screenScale: platformModule.screen.mainScreen.scale
+                screenHeight: platformModule.Screen.mainScreen.heightDIPs,
+                screenWidth: platformModule.Screen.mainScreen.widthDIPs,
+                screenScale: platformModule.Screen.mainScreen.scale
             },
             appId,
             appVersionName,

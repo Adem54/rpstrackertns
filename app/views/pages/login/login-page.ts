@@ -1,5 +1,4 @@
-import * as traceModule from '@nativescript/core/trace';
-import { NavigatedData, Page, EventData, Button } from '@nativescript/core';
+import { Trace, NavigatedData, Page, EventData, Button } from '@nativescript/core';
 import { LoginViewModel } from '~/shared/view-models/pages/login/login.page.vm';
 import {
     goToRegisterPage,
@@ -49,7 +48,7 @@ export function onGotoRegisterTap() {
     );
     */
 
-    traceModule.error('HERE WE ARE: onGotoRegisterTap');
+    Trace.error('HERE WE ARE: onGotoRegisterTap');
 
     goToRegisterPage();
 }
