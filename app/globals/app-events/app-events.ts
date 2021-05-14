@@ -1,5 +1,5 @@
-import * as app from 'tns-core-modules/application';
-import * as traceModule from 'tns-core-modules/trace';
+import * as app from '@nativescript/core/application';
+import * as traceModule from '@nativescript/core/trace';
 import { setNativeEvents } from '~/globals/app-events/app-events-native';
 import { getErrorService } from '../dependencies/locator';
 

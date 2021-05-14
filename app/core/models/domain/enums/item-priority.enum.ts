@@ -1,4 +1,4 @@
-import { Color } from 'tns-core-modules/color';
+import { Color } from '@nativescript/core';
 import { EMPTY_STRING } from '~/core/models/domain/constants/strings';
 
 export enum PriorityEnum {

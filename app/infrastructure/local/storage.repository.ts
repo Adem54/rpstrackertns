@@ -1,4 +1,4 @@
-import * as appSettings from 'tns-core-modules/application-settings';
+import * as appSettings from '@nativescript/core/application-settings';
 import { PtStorageRepository } from '~/core/contracts/repositories';
 
 export class StorageRepository implements PtStorageRepository {

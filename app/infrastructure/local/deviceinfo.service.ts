@@ -1,5 +1,5 @@
-import * as appModule from 'tns-core-modules/application';
-import * as platformModule from 'tns-core-modules/platform';
+import * as appModule from '@nativescript/core/application';
+import * as platformModule from '@nativescript/core/platform';
 import * as utilsModule from 'tns-core-modules/utils/utils';
 
 import { PtDeviceInfoService } from '~/core/contracts/services';

@@ -1,5 +1,5 @@
 import { goToSettingsPage } from '~/shared/helpers/navigation/nav.helper';
-import { EventData } from 'tns-core-modules/ui/page';
+import { EventData } from '@nativescript/core';
 import { PresetType } from '~/core/models/types';
 import { getBacklogService } from '~/globals/dependencies/locator';
 

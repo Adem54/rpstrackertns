@@ -1,8 +1,5 @@
-import { topmost, NavigationEntry, Frame } from 'tns-core-modules/ui/frame';
+import { NavigationEntry, Frame, topmost, Page, StackLayout, Label } from '@nativescript/core';
 import { ROUTES } from '~/shared/helpers/navigation/routes';
-import { Page } from 'tns-core-modules/ui/page';
-import { StackLayout } from 'tns-core-modules/ui/layouts/stack-layout';
-import { Label } from 'tns-core-modules/ui/label';
 
 export function navigate(
     pageModuleNameOrNavEntry: string | NavigationEntry,

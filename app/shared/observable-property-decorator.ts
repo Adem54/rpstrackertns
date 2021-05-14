@@ -1,4 +1,4 @@
-import { Observable } from 'tns-core-modules/data/observable';
+import { Observable } from '@nativescript/core';
 
 const PREFIX = 'RPS_OBSERVABLE_PROP_';
 

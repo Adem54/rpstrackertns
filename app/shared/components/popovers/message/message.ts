@@ -1,4 +1,4 @@
-import { EventData } from 'tns-core-modules/ui/page';
+import { EventData } from '@nativescript/core';
 import { onPopoverLoaded } from '../popover-base';
 import { closePopover } from '~/shared/helpers/popover/popover.helper';
 

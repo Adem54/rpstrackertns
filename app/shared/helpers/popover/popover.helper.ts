@@ -1,4 +1,4 @@
-import { topmost, EventData } from 'tns-core-modules/ui/frame';
+import { EventData, topmost } from '@nativescript/core';
 
 export const POPOVER_SHOW_EVENT_NAME = 'showPopover';
 export const POPOVER_HIDE_EVENT_NAME = 'hidePopover';

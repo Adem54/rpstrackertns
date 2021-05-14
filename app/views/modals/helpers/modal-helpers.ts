@@ -1,4 +1,4 @@
-import { Page, ShowModalOptions } from 'tns-core-modules/ui/page';
+import { Page, ShowModalOptions } from '@nativescript/core';
 import { ROUTES } from '~/shared/helpers/navigation/routes';
 import { PtModalContext } from './pt-modal-context.model';
 import { PtModalListDisplayItem } from './pt-modal-list-display-item.model';

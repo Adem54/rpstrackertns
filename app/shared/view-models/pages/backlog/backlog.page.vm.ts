@@ -1,5 +1,4 @@
-import { Observable } from 'tns-core-modules/data/observable';
-import { ObservableArray } from 'tns-core-modules/data/observable-array';
+import { Observable, ObservableArray } from '@nativescript/core';
 import { PtItem } from '~/core/models/domain';
 import { PtBacklogService } from '~/core/contracts/services/pt-backlog-service.contract';
 import {

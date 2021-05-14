@@ -1,6 +1,4 @@
-import { Frame } from 'tns-core-modules/ui/frame';
-import { Page, EventData, View } from 'tns-core-modules/ui/page';
-import { load } from 'tns-core-modules/ui/builder';
+import { Frame, EventData, Page, View, load } from '@nativescript/core';
 import { RadSideDrawer } from 'nativescript-ui-sidedrawer';
 
 import {

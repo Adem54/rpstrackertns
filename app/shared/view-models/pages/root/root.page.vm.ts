@@ -1,4 +1,4 @@
-import { Observable } from 'tns-core-modules/data/observable';
+import { Observable } from '@nativescript/core';
 import { ObservableProperty } from '~/shared/observable-property-decorator';
 import { getAuthService } from '~/globals/dependencies/locator';
 import { PtAuthService } from '~/core/contracts/services';

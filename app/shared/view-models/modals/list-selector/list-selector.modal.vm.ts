@@ -1,4 +1,4 @@
-import { Observable } from 'tns-core-modules/data/observable';
+import { Observable } from '@nativescript/core';
 import { PtModalContext } from '~/views/modals/helpers/pt-modal-context.model';
 
 export class ListSelectorModalViewModel<T, R> extends Observable {

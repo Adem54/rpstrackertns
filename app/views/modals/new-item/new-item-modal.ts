@@ -1,9 +1,4 @@
-import {
-    ShownModallyData,
-    Page,
-    EventData,
-    View
-} from 'tns-core-modules/ui/page';
+import { EventData, Page, View } from '@nativescript/core';
 import { RadDataForm } from 'nativescript-ui-dataform';
 
 import { NewItemModalViewModel } from '~/shared/view-models/modals/new-item/new-item.modal.vm';

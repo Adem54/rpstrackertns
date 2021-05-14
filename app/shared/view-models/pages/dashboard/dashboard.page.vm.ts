@@ -1,4 +1,4 @@
-import { Observable } from 'tns-core-modules/data/observable';
+import { Observable } from '@nativescript/core';
 import { ObservableProperty } from '~/shared/observable-property-decorator';
 import { ObservableArray } from 'tns-core-modules/data/observable-array/observable-array';
 import {

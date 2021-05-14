@@ -1,6 +1,4 @@
-import { getResources } from 'tns-core-modules/application';
-import { EventData, Page, isIOS } from 'tns-core-modules/ui/page';
-import { ItemEventData } from 'tns-core-modules/ui/list-view';
+import { Application, EventData, Page, isIOS, ItemEventData } from '@nativescript/core';
 
 import { RadSideDrawer } from 'nativescript-ui-sidedrawer';
 import { BarSeries, ChartEventData } from 'nativescript-ui-chart';
@@ -14,7 +12,7 @@ import { ItemType } from '~/core/constants';
 import { PtItem } from '~/core/models/domain';
 import { goToDetailPage } from '~/shared/helpers/navigation/nav.helper';
 
-getResources().imageResFromType = (type: PtItemType) =>
+Application.getResources().imageResFromType = (type: PtItemType) =>
     ItemType.imageResFromType(type);
 
 const vm: DashboardViewModel = new DashboardViewModel();

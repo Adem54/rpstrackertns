@@ -1,4 +1,4 @@
-import { ListView } from 'tns-core-modules/ui/list-view';
+import { ListView } from '@nativescript/core';
 
 export function addScrollListener(
     listView: ListView,

@@ -1,4 +1,4 @@
-import { ListView } from 'tns-core-modules/ui/list-view';
+import { ListView } from '@nativescript/core';
 import { ListViewScrollListener } from './list-view-scroll-listener';
 import { ListViewScrollListenerDelegateImpl } from './list-view-ios-delegate';
 

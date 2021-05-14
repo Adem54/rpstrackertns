@@ -1,5 +1,5 @@
-import * as application from 'tns-core-modules/application';
-import * as traceModule from 'tns-core-modules/trace';
+import * as application from '@nativescript/core/application';
+import * as traceModule from '@nativescript/core/trace';
 import { appConfig } from '~/config/app-config';
 import { setAppEvents } from './globals/app-events/app-events';
 import { localize } from 'nativescript-localize';

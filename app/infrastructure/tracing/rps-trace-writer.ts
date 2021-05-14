@@ -1,4 +1,4 @@
-import * as traceModule from 'tns-core-modules/trace';
+import * as traceModule from '@nativescript/core/trace';
 import { PtErrorService } from '~/core/contracts/services';
 
 export class RPSTraceWriter {

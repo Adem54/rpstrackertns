@@ -1,6 +1,5 @@
-import * as traceModule from 'tns-core-modules/trace';
-import { NavigatedData, Page, EventData } from 'tns-core-modules/ui/page';
-import { Button } from 'tns-core-modules/ui/button';
+import * as traceModule from '@nativescript/core/trace';
+import { NavigatedData, Page, EventData, Button } from '@nativescript/core';
 import { LoginViewModel } from '~/shared/view-models/pages/login/login.page.vm';
 import {
     goToRegisterPage,

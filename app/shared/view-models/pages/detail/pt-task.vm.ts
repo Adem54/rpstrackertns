@@ -1,4 +1,4 @@
-import { Observable } from 'tns-core-modules/data/observable';
+import { Observable } from '@nativescript/core';
 import { toUpdateTaskRequest } from '~/core/contracts/requests/backlog';
 import { PtTaskService } from '~/core/contracts/services';
 import { PtItem, PtTask } from '~/core/models/domain';

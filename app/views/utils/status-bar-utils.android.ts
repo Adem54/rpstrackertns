@@ -1,6 +1,4 @@
-import * as app from 'tns-core-modules/application';
-import * as platform from 'tns-core-modules/platform';
-import * as frame from 'tns-core-modules/ui/frame';
+import * as frame from '@nativescript/core/ui/frame';
 
 declare const android: any;
 

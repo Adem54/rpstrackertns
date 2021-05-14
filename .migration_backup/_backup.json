@@ -1,0 +1,14 @@
+{
+	"name": "migration",
+	"paths": [
+		"webpack.config.js",
+		"package.json",
+		"package-lock.json",
+		"tsconfig.tns.json",
+		"nsconfig.json",
+		"app/package.json",
+		"package.json",
+		"nsconfig.json",
+		"app/package.json"
+	]
+}

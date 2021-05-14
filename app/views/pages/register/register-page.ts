@@ -1,5 +1,4 @@
-import { NavigatedData, Page, EventData } from 'tns-core-modules/ui/page';
-import { Button } from 'tns-core-modules/ui/button';
+import { NavigatedData, Page, EventData, Button } from '@nativescript/core';
 import { RegisterViewModel } from '~/shared/view-models/pages/register/register.page.vm';
 import {
     goToLoginPage,

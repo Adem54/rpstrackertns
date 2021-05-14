@@ -1,11 +1,5 @@
-import { EventData, PropertyChangeData } from 'tns-core-modules/ui/page';
-import { Color } from 'tns-core-modules/color';
+import { PropertyChangeData, Color, Label, TextField, KeyboardType, AnimationPromise, fromObject } from '@nativescript/core';
 import { LayoutBase } from 'tns-core-modules/ui/layouts/layout-base';
-import { Label } from 'tns-core-modules/ui/label';
-import { TextField } from 'tns-core-modules/ui/text-field';
-import { KeyboardType } from 'tns-core-modules/ui/editable-text-base';
-import { AnimationPromise } from 'tns-core-modules/ui/animation';
-import { fromObject } from 'tns-core-modules/data/observable';
 
 interface FloatLabelVm {
     placeholder: string;

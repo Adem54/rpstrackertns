@@ -1,4 +1,4 @@
-import { Page, ShownModallyData } from 'tns-core-modules/ui/page';
+import { ShownModallyData, Page } from '@nativescript/core';
 import { ListSelectorModalViewModel } from '~/shared/view-models/modals/list-selector/list-selector.modal.vm';
 
 export function onShownModally(args: ShownModallyData) {

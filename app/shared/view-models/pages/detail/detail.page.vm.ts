@@ -1,5 +1,4 @@
-import { Observable } from 'tns-core-modules/data/observable';
-import { ObservableArray } from 'tns-core-modules/data/observable-array';
+import { Observable, ObservableArray } from '@nativescript/core';
 import { ItemType } from '~/core/constants/pt-item-types';
 
 import { PtItem, PtUser } from '~/core/models/domain';

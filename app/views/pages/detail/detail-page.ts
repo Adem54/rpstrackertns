@@ -1,6 +1,4 @@
-import { EventData, NavigatedData, Page, View } from 'tns-core-modules/ui/page';
-import { ConfirmOptions, confirm } from 'tns-core-modules/ui/dialogs';
-import { TextField } from 'tns-core-modules/ui/text-field';
+import { NavigatedData, Page, EventData, View, ConfirmOptions, Dialogs, TextField } from '@nativescript/core';
 
 import { DataFormEventData, RadDataForm } from 'nativescript-ui-dataform';
 
@@ -42,7 +40,7 @@ export function onDeleteTap() {
         cancelButtonText: 'Cancel'
     };
     // confirm with options, with promise
-    confirm(options).then((result: boolean) => {
+    Dialogs.confirm(options).then((result: boolean) => {
         // result can be true/false/undefined
         if (result) {
             detailsVm.deleteRequested();

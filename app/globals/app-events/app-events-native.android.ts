@@ -1,4 +1,4 @@
-import * as app from 'tns-core-modules/application';
+import * as app from '@nativescript/core/application';
 
 export const setNativeEvents = () => {
     app.android.on(

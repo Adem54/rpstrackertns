@@ -1,4 +1,4 @@
-import { Observable } from 'tns-core-modules/data/observable';
+import { Observable } from '@nativescript/core';
 import { PtComment, PtUser } from '~/core/models/domain';
 
 export class PtCommentViewModel extends Observable implements PtComment {

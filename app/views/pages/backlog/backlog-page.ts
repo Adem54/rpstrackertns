@@ -1,8 +1,6 @@
 import { RadSideDrawer } from 'nativescript-ui-sidedrawer';
 import { BacklogViewModel } from '~/shared/view-models/pages/backlog/backlog.page.vm';
-import { NavigatedData, Page, EventData, View } from 'tns-core-modules/ui/page';
-import { ItemEventData, ListView } from 'tns-core-modules/ui/list-view';
-import { screen, isIOS } from 'tns-core-modules/platform';
+import { NavigatedData, Page, View, EventData, ListView, ItemEventData, Screen, isIOS } from '@nativescript/core';
 import { PtItem } from '~/core/models/domain';
 import {
     goToDetailPage
@@ -20,8 +18,8 @@ export function onNavigatingTo(args: NavigatedData) {
     page.bindingContext = backlogVm;
 
     const btnFab = page.getViewById('btnFab') as View;
-    btnFab.top = screen.mainScreen.heightDIPs - (isIOS ? 150 : 200);
-    btnFab.left = screen.mainScreen.widthDIPs - 70;
+    btnFab.top = Screen.mainScreen.heightDIPs - (isIOS ? 150 : 200);
+    btnFab.left = Screen.mainScreen.widthDIPs - 70;
 }
 
 export function onLoaded(args: EventData) {
