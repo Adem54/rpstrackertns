@@ -21,8 +21,7 @@
     "moduleResolution": "node",
     "removeComments": false
   },
-  "exclude": [
-    "node_modules",
-    "platforms"
-  ]
+  "include": ["app/**/*"],
+  "files": ["./references.d.ts"],
+  "exclude": ["platforms"]
 }

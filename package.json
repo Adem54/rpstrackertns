@@ -22,9 +22,9 @@
     "nativescript-ui-sidedrawer": "~9.0.0"
   },
   "devDependencies": {
-    "@nativescript/ios": "JSC",
+    "@nativescript/ios": "~8.0.0",
     "@nativescript/types": "~8.0.0",
-    "@nativescript/webpack": "~5.0.0-beta.0",
+    "@nativescript/webpack": "beta",
     "sass": "^1.32.13",
     "tslint": "~6.1.3",
     "typescript": "~4.1.0"
